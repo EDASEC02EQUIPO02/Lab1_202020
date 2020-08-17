@@ -78,7 +78,7 @@ def printMenu():
     print("4- Contar elementos filtrados por palabra clave")
     print("5- Consultar elementos a partir de dos listas")
     print("0- Salir")
-    
+
 def countElementsFilteredByColumn(criteria, column, lst):
 
     """
@@ -112,27 +112,19 @@ def countElementsByCriteria(criteria, lst, lst2):
     """
     Retorna la cantidad de elementos que cumplen con un criterio para una columna dada
     """
-    lista3 = []
-
-    for i in lst:
-        for a in lst2:
-            if i["id"] == a["id"]:
-                dicc = {}
-                dicc["id"] = int(i["id"])
-                dicc["vote_average"] = float(i["vote_average"])
-                dicc["director_name"] = a["director_name"]
-                lista3.append(dicc)
     cont = 0
     valor = 0
-    for i in lista3:
-        if i["director_name"] == criteria and i["vote_average"] >= 6:
-            cont += 1
-            valor += i["vote_average"]
+    for i in lst2:
+        if i["director_name"] == criteria:
+            for a in lst:
+                if i["id"] == a["id"]:
+                    if float(a["vote_average"]) >= 6:
+                        cont += 1
+                        valor += float(a["vote_average"])
     if cont != 0:
         promedio = valor/cont
     else:
         promedio = valor/1
-
     return "La cantidad de películas buenas es de "+ str(cont)+ " y su promedio es de "+ str(round(promedio,2))
 
 
