@@ -11,3 +11,5 @@ Integrantes del grupo:
 Luis Ángel Angarita Coa, la.angarita@uniandes.edu.co, 201910393.
 Daniel Medina Celis, d.medina2@uniandes.edu.co, 201922645.
 Daniel Villar González, d.villarg@uniandes.edu.co, 201923374.
+
+PD: No pudimos descargar los archivos grandes, dado que el tamaño de uno sobrepasaba el límite de carga en Github (50MB) y el otro era solo para MAC. 
